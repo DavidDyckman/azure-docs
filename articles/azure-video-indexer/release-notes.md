@@ -45,7 +45,7 @@ var uploadRequestResult = await client.PostAsync($"{apiUrl}/{accountInfo.Loc
 
 ### Create Video Indexer blade improvements in Azure portal 
 
-Azure Video Indexer now supports the creation of new resource using system-assigned managed identity or system and user assigned managed identity for the same resource. 
+Azure Video Indexer now supports the creation of  new resources using system-assigned managed identity or system and user assigned managed identity for the same resource. 
 
 You can also change the primary managed identity using the **Identity** tab in the [Azure portal](https://portal.azure.com/#home). 
 
@@ -62,21 +62,27 @@ Also, see the following: the [announcement blog post](https://aka.ms/AAh91ff) an
 
 ### Line breaking in transcripts
 
-Improved line break logic to better split transcript into sentences. New editing capabilities are now available through the Azure Video Indexer portal, such as adding a new line and editing the line’s timestamp. For more information, see [Insert or remove transcript lines](edit-transcript-lines-portal.md).
+Video Indexer has added improved line break logic to better split transcript into sentences. In addition, editing capabilities are now available through the Azure Video Indexer portal. For example, users can now add a new line or edit a line’s timestamp. For more information, see [Insert or remove transcript lines](edit-transcript-lines-portal.md).
 
 ### Azure Monitor integration
  
 Azure Video Indexer now supports Diagnostics settings for Audit events. Logs of Audit events can now be exported through diagnostics settings to Azure Log Analytics, Storage, Event Hubs, or a third-party solution.
 
-The additions enable easier access to analyze the data, monitor resource operation, and create automatically flows to act on an event. For more information, see [Monitor Azure Video Indexer](monitor-video-indexer.md).
+This enables easier access to analyze the data, monitor resource operation, and create automated flows to act on an event. For more information, see [Monitor Azure Video Indexer](monitor-video-indexer.md).
 
 ### Video Insights improvements
 
-Object Character Reader (OCR) is improved by 60%. Face Detection is improved by 20%. Label accuracy is improved by 30% over a wide variety of videos. These improvements are available immediately in all regions and do not require any changes by the customer.
+The following improvements were made:
+
+* Object Character Reader (OCR) is improved by 60%
+* Face Detection is improved by 20%
+* Label accuracy is improved by 30% 
+ 
+These improvements are available immediately in all regions and do not require any changes by the customer.
 
 ### Service tag 
 
-Azure Video Indexer is now part of [Network Service Tags](network-security.md). Video Indexer often needs to access other Azure resources (for example, Storage). If you secure your inbound traffic to your resources with a Network Security Group you can now select Video Indexer as part of the built-in Service Tags. This will simplify security management as we populate the Service Tag with our public IPs.
+Azure Video Indexer is now part of [Network Service Tags](network-security.md). Video Indexer often needs to access other Azure resources (for example, Storage). If you secure your inbound traffic to your resources with a Network Security Group you can now select Video Indexer as part of the built-in Service Tags. This will simplify security management as we populate the Service Tag with our public IP's.
 
 ### Celebrity recognition toggle 
 
@@ -108,7 +114,7 @@ The following improvements were made:
 
 * Azure Video Indexer widgets support more than 1 locale in a widget's parameter.
 * The Insights widgets support initial search parameters and multiple sorting options. 
-* The Insights widgets also include a confirmation step before deleting a face to avoid mistakes.
+* The Insights widgets now has a confirmation step before deleting a face to avoid mistakes.
 * The widget customization now supports width as strings (for example 100%, 100vw).
 
 ## February 2022
@@ -127,8 +133,8 @@ Added new code samples including HTTP calls to use Azure Video Indexer create, r
 
 The audio effects detection capability was improved to have a better detection rate over the following classes:
 
-* Crowd reactions (cheering, clapping, and booing),
-* Gunshot or explosion,
+* Crowd reactions (cheering, clapping, and booing)
+* Gunshot or explosion
 * Laughter
 
 For more information, see [Audio effects detection](audio-effects-detection.md).
@@ -150,7 +156,7 @@ Azure Video Indexer introduces source languages support for STT (speech-to-text)
 
 ### Matched person detection capability
 
-When indexing a video through our advanced video settings, you can view the new matched person detection capability. If there are people observed  in your media file, you can now view the specific person who matched each of them through the media player.
+Indexing a video through our advanced video settings now includes the matched person detection. If your media file has matched people, they can be viewed in the Observed People and Matched Persons section of the media player.
 
 ## November 2021
 
